@@ -1,0 +1,56 @@
+{% load static %}
+
+<html lang="en">
+<head>
+  <title>Mikail Aydoğdu</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+
+  <link href="{% static 'home.css' %}" rel="stylesheet">
+
+
+</head>
+  <body>
+
+    <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+             {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> {{ user.username }}</a>
+            </li>
+               <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+
+            {% endif %}
+          </ul>
+          <div class="social-part">
+            <a target="_blank" href="https://github.com/mikailaydogdu/" ><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://twitter.com/MikailAydogduu" ><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.instagram.com/mikail.aydogduu/" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </nav>
+      {% block content %}
+    {% endblock %}
+
+</body>
+</html>
