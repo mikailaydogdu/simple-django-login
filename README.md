@@ -1,3 +1,6 @@
+<img src="screenshot/login.png" width="200" height="200"/>
+<img src="screenshot/loginerror.png" width="200" height="200"/>
+
 1. Clone the repository:
 <pre>git clone https://github.com/mikailaydogdu/simple-django-login.git</pre>
 
