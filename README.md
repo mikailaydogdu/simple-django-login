@@ -1,9 +1,22 @@
-
 <img src="screenshot/login.png"/>
 
 Django custom login error message
 
 <img src="screenshot/loginerror.png"/>
+
+<h1>Prerequisites</h1>
+
+Install virtual environment:
+On macOS and Linux:
+
+<pre>
+$ virtualenv -p python3 env
+$ cd env
+$ source bin/activate
+$ pip install django
+</pre>
+
+<h1>How to run</h1>
 
 1. Clone the repository:
 <pre>git clone https://github.com/mikailaydogdu/simple-django-login.git</pre>
