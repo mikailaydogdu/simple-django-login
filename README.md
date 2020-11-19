@@ -1,6 +1,6 @@
 <img src="screenshot/login.png"/>
 
-Django custom login error message
+Django login custom error message
 
 <img src="screenshot/loginerror.png"/>
 
